@@ -42,13 +42,18 @@
           <jnlpArgs>-noReconnect</jnlpArgs>
           <containerInfo>
             <type>DOCKER</type>
-            <dockerImage>mesosphere/jenkins-dind:0.3.1</dockerImage>
+            <dockerImage>lnmx-docker.net/jenkins-dind-agent:36d9c9e65875ac7a5efe956308d139c1953b3bf4</dockerImage>
             <networking>BRIDGE</networking>
             <useCustomDockerCommandShell>true</useCustomDockerCommandShell>
             <customDockerCommandShell>wrapper.sh</customDockerCommandShell>
             <dockerPrivilegedMode>true</dockerPrivilegedMode>
             <dockerForcePullImage>false</dockerForcePullImage>
           </containerInfo>
+          <additionalURIs>
+            <org.jenkinsci.plugins.mesos.MesosSlaveInfo.URI>
+              file:///etc/docker.tar.gz
+            </org.jenkinsci.plugins.mesos.MesosSlaveInfo.URI>
+          </additionalURIs>
           <mode>NORMAL</mode>
         </org.jenkinsci.plugins.mesos.MesosSlaveInfo>
       </slaveInfos>
