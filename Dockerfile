@@ -15,8 +15,7 @@ ENV JENKINS_HOME /var/jenkins_home
 ENV JENKINS_FOLDER /usr/share/jenkins/
 ENV JAVA_HOME "/usr/lib/jvm/java-7-openjdk-amd64"
 
-RUN apt-get update
-RUN apt-get install -y git python zip curl default-jre jq gradle ant maven
+RUN apt-get clean && apt-get update && apt-get install -y git python zip curl default-jre jq gradle ant maven
 
 RUN mkdir -p /var/log/nginx/jenkins
 COPY conf/nginx/nginx.conf /etc/nginx/nginx.conf
