@@ -42,7 +42,7 @@
           <jnlpArgs>-noReconnect</jnlpArgs>
           <containerInfo>
             <type>DOCKER</type>
-            <dockerImage>lnmx-docker.net/jenkins-dind-agent:36d9c9e65875ac7a5efe956308d139c1953b3bf4</dockerImage>
+            <dockerImage>lnmx-docker.net/jenkins-dind-agent:a72fc444f94721b54ecf7c46a339be273ea0adf8-ubuntu</dockerImage>
             <networking>BRIDGE</networking>
             <useCustomDockerCommandShell>true</useCustomDockerCommandShell>
             <customDockerCommandShell>wrapper.sh</customDockerCommandShell>
